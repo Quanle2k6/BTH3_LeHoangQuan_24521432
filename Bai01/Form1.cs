@@ -57,7 +57,7 @@ namespace Bai01
         private void Form1_Shown(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
-            listBox1.Items.Add(now.ToString() + ": Form cha deactivated.");
+            listBox1.Items.Add(now.ToString() + ": Form cha shown.");
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
