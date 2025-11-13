@@ -31,23 +31,31 @@ namespace Bai09
 
             listBox2.Items.Clear();
         }
-        
-        
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (listBox1.Items.Count > 0)
+            if (listBox1.SelectedItem != null)
             {
-                listBox2.Items.Add(listBox1.SelectedItem);
-                listBox1.Items.Remove(listBox1.SelectedItem);
+                object selectedItem = listBox1.SelectedItem;
+
+                listBox2.Items.Add(selectedItem);
+
+                listBox1.Items.Remove(selectedItem);
+
+                
             }
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (listBox2.Items.Count > 0)
+            if (listBox2.SelectedItem != null)
             {
-                listBox1.Items.Add(listBox2.SelectedItem);
-                listBox2.Items.Remove(listBox2.SelectedItem);
+                object selectedItem = listBox2.SelectedItem;
+
+                listBox1.Items.Add(selectedItem);
+
+                listBox2.Items.Remove(selectedItem);
             }
         }
         private void button3_Click(object sender, EventArgs e)
@@ -76,7 +84,12 @@ namespace Bai09
                 else
                 {
                     MessageBox.Show("Dữ liệu bạn nhập không có để xóa!");
-                }    
+                }
+                textBox1.Clear();
+                textBox2.Clear();
+                comboBox1.Text = string.Empty;
+                checkBox1.Checked = false;
+                checkBox2.Checked = false;
             }
             else
             {
