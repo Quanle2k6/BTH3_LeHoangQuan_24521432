@@ -84,7 +84,12 @@ namespace Bai09
                 else
                 {
                     MessageBox.Show("Dữ liệu bạn nhập không có để xóa!");
-                }    
+                }
+                textBox1.Clear();
+                textBox2.Clear();
+                comboBox1.Text = string.Empty;
+                checkBox1.Checked = false;
+                checkBox2.Checked = false;
             }
             else
             {
